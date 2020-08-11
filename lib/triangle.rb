@@ -37,6 +37,5 @@ class Triangle
     (length_A == length_B) && (length_A == length_C)
   end
 
-  class TriangleError < StandardError
-  end
+  
 end
