@@ -21,6 +21,18 @@ class Triangle
     end
   end
 
+  def kind
+    if(pass? == false || triangle_inequality == false)
+      raise TriangleError
+    elsif(equilateral?)
+      :equilateral
+    elsif(scalene?)
+      :scalene
+    elsif(isosceles?)
+      :isosceles
+    end
+  end
+
   def equilateral? #all sides are equal
     (length_A == length_B) && (length_A == length_C)
   end
