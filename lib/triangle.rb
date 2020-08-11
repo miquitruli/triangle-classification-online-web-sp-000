@@ -1,5 +1,5 @@
 class Triangle
-  attr_accessor :length_A, :length_B, :length_C, 
+  attr_accessor :length_A, :length_B, :length_C,
   @triangle = []
 
   def initialize(length_A, length_B, length_C)
