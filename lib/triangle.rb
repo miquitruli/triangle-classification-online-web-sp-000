@@ -22,7 +22,7 @@ class Triangle
   end
 
   def kind
-    if(pass? == false || triangle_inequality == false)
+    if(pass? == false || triangle_inequality? == false)
       raise TriangleError
     elsif(equilateral?)
       :equilateral
