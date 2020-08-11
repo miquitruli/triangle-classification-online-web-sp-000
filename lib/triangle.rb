@@ -14,14 +14,31 @@ class Triangle
   end
 
   def pass?
-    if (@length_A >= 0) && (@length_B >= 0) && (@length_C >= 0)
-      return true
-    else
+    if (@length_A <= 0) && (@length_B <= 0) && (@length_C <= 0)
       return false
+    else
+      return true
     end
   end
 
   def kind
+    if (@side_1 <= 0) || (@side_2 <= 0) || (@side_3 <= 0)
+      raise TriangleError
+    elsif (@side_1+@side_2 <= @side_3) || (@side_1+@side_3 <= @side_2) || (@side_2+@side_3 <= @side_1)
+      raise TriangleError
+    else
+      if (@side_1 == @side_2) && (@side_2 == @side_3)
+        :equilateral
+      elsif (@side_1 == @side_2) || (@side_2 == @side_3) || (@side_1 == @side_3)
+        :isosceles
+      elsif (@side_1 != @side_2) && (@side_2 != @side_3) && (@side_1 != @side_3)
+        :scalene
+      end
+    end
+
+  end
+
+
     if(pass? == false || triangle_inequality? == false)
       raise TriangleError
     elsif(equilateral?)
