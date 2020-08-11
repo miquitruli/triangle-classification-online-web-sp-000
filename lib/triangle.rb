@@ -6,7 +6,7 @@ class Triangle
     @length_A = length_A
     @length_B = length_B
     @length_C = length_C
-    @triangle = [length_A, length_B, length_C]
+    @triangle = length_A, length_B, length_C
   end
 
   def equilateral? #all sides are equal
