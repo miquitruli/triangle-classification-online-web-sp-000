@@ -41,6 +41,10 @@ class Triangle
     (length_A == length_B) || (length_A == length_C) || (length_B == length_C)
   end
 
+  def scalene?
+    (length_A != length_B) && (length_A != length_C) && (length_B != length_C)
+  end
+
 
 
 end
