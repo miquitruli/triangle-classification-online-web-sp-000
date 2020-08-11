@@ -1,9 +1,18 @@
 class Triangle
-  attr_accessor :side1, :side2, :side3
- @sides = []
+  attr_accessor :length_A, :length_B, :length_C,
+  @triangle = []
 
- def initialize(side1, side2, side3)
-   @side1, @side2, @side3 = side1, side2, side3
-   @sides = [side1, side2, side3]
- end
+  def initialize(length_A, length_B, length_C)
+    @length_A = length_A
+    @length_B = length_B
+    @length_C = length_C
+    @triangle = length_A, length_B, length_C
+  end
+
+  def equilateral? #all sides are equal
+    (length_A == length_B) && (length_A == length_C)
+  end
+
+  class TriangleError < StandardError
+  end
 end
