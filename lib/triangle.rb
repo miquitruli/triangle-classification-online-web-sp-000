@@ -9,6 +9,9 @@ class Triangle
     @triangle = length_A, length_B, length_C
   end
 
+  def triangle_inequality?
+    (@length_B + @length_C > @length_A) && (@length_A + @length_C > @length_B) && (@length_A + @length_B > @length_C)
+
   def equilateral? #all sides are equal
     (length_A == length_B) && (length_A == length_C)
   end
