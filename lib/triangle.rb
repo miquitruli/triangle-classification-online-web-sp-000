@@ -13,6 +13,10 @@ class Triangle
     (@length_B + @length_C > @length_A) && (@length_A + @length_C > @length_B) && (@length_A + @length_B > @length_C)
   end
 
+  def pass?
+    (@length_A >= 0) && (@length_B >= 0) && (@length_C >= 0)
+  end
+
   def equilateral? #all sides are equal
     (length_A == length_B) && (length_A == length_C)
   end
