@@ -14,7 +14,11 @@ class Triangle
   end
 
   def pass?
-    (@length_A >= 0) && (@length_B >= 0) && (@length_C >= 0)
+    if (@length_A >= 0) && (@length_B >= 0) && (@length_C >= 0)
+      return true
+    else
+      return false
+    end
   end
 
   def equilateral? #all sides are equal
